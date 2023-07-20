@@ -34,7 +34,7 @@ public class StudentController {
         return ResponseEntity.ok(newStudent);
     }
 
-    @PutMapping("{id}")
+    @PutMapping()
     public ResponseEntity<Student> editStudent(@RequestBody Student student) {
         Student foundStudent = service.editStudent(student);
         if (foundStudent == null) {
